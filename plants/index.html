@@ -28,11 +28,21 @@
         </a>
         <nav class="nav">
           <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link accent" href="#welcome">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
-            <li class="nav-item"><a class="nav-link" href="#prices">Price</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
+            <li class="nav-item">
+              <a class="nav-link accent" href="#welcome">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#prices">Price</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacts">Contacts</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -40,9 +50,14 @@
     <main class="main">
       <section id="welcome" class="bg-light-green">
         <div class="welcome container">
-          <div class="welcome-img"><img  src="assets/images/leafs_big.png" alt="leafs" /></div>
+          <div class="welcome-img">
+            <img src="assets/images/leafs_big.png" alt="leafs" />
+          </div>
           <div class="welcome-content">
-            <h1 class="welcome-header">We grow <span class="accented-text-green">plants</span> and give you oxygen</h1>
+            <h1 class="welcome-header">
+              We grow <span class="accented-text-green">plants</span> and give
+              you oxygen
+            </h1>
             <p class="welcome-paragraph">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -53,10 +68,14 @@
         </div>
       </section>
       <section id="about" class="about bg-white">
-        <div class="container">
-          <div>
-            <h2>We are <span>professional experienced</span> gardeners</h2>
-            <p>
+        <div class="container about-container">
+          <div class="about-content">
+            <h2 class="about-header accented-text-green">
+              We are
+              <span class="accented-text-orange">professional experienced</span>
+              gardeners
+            </h2>
+            <p class="about-paragraph">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -65,59 +84,62 @@
               electronic typesetting, remaining essentially unchanged.
             </p>
           </div>
-          <div><img src="assets/images/houseplant.png" alt="houseplant" /></div>
+          <div class="about-img-container">
+            <img src="assets/images/houseplant.png" alt="houseplant" />
+          </div>
         </div>
       </section>
       <section id="service" class="service bg-light-green">
         <div class="container">
-          <div>
-            <h2>Service and our projects</h2>
-            <div>
-              <button>Gardens</button><button>Lawn</button
-              ><button>Planting</button>
+          <div class="service-controls">
+            <h2 class="service-controls-header accented-text-green">Service and our projects</h2>
+            <div class="service-controls-btns">
+              <button class="service-btn" data-category="garden">Gardens</button
+              ><button class="service-btn" data-category="lawn">Lawn</button
+              ><button class="service-btn" data-category="planting">Planting</button>
             </div>
           </div>
-          <div>
-            <div>
-              <img src="assets/images/projects_1.png" alt="Garden care" />
-              <div>
-                <h3>Garden care</h3>
-                <p>Lorem Ipsum has been the industry</p>
+          <div class="service-card-container">
+            <div class="service-card">
+              <div class="service-img-container"><img class="service-img" src="assets/images/projects_1.png" alt="Garden care" /></div>
+              <div class="card-content">
+                <h3 class="card-header">Garden care</h3>
+                <p class="card-paragraph">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div>
-              <img src="assets/images/projects_2.png" alt="Planting" />
-              <div>
-                <h3>Planting</h3>
-                <p>Lorem Ipsum has been the industry</p>
+            <div class="service-card">
+              <div class="service-img-container"><img class="service-img" src="assets/images/projects_2.png" alt="Planting" /></div>
+              <div class="card-content">
+                <h3 class="card-header">Planting</h3>
+                <p class="card-paragraph">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div>
-              <img src="assets/images/projects_3.png" alt="Lawn care" />
-              <div>
-                <h3>Lawn care</h3>
-                <p>Lorem Ipsum has been the industry</p>
+            <div class="service-card">
+              <div class="service-img-container"><img class="service-img" src="assets/images/projects_3.png" alt="Lawn care" /></div>
+              <div class="card-content">
+                <h3 class="card-header">Lawn care</h3>
+                <p class="card-paragraph">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div>
-              <img src="assets/images/projects_4.png" alt="Planting" />
-              <div>
-                <h3>Planting</h3>
-                <p>Lorem Ipsum has been the industry</p>
+            <div class="service-card">
+              <div class="service-img-container"><img class="service-img" src="assets/images/projects_4.png" alt="Planting" /></div>
+              <div class="card-content">
+                <h3 class="card-header">Planting</h3>
+                <p class="card-paragraph">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div>
-              <img src="assets/images/projects_5.png" alt="Garden care" />
-              <div>
-                <h3>Garden care</h3>
-                <p>Lorem Ipsum has been the industry</p>
+            <div class="service-card">
+              <div class="service-img-container"><img class="service-img" src="assets/images/projects_5.png" alt="Garden care" /></div>
+              <div class="card-content">
+                <h3 class="card-header">Garden care</h3>
+                <p class="card-paragraph">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div>
-              <img src="assets/images/projects_6.png" alt="Planting" />
-              <div>
-                <h3>Planting</h3>
-                <p>Lorem Ipsum has been the industry</p>
+            <div class="service-card">
+              <div class="service-img-container"><img class="service-img" src="assets/images/projects_6.png" alt="Planting" /></div>
+              <div class="card-content">
+                <h3 class="card-header">Planting</h3>
+                <p class="card-paragraph">Lorem Ipsum has been the industry</p>
               </div>
             </div>
           </div>
@@ -202,7 +224,7 @@
             </div>
             <img
               src="assets/images/contact_woman.png"
-              alt="woman whith plants"
+              alt="woman whith plant"
             />
           </div>
         </div>
@@ -210,8 +232,13 @@
     </main>
     <footer class="footer bg-white">
       <div class="container">
-        <div><span>©</span><span>2022</span><span>github</span></div>
-        <div>Rolling Scopes School</div>
+        <div>
+          <span>©</span><span>2022</span
+          ><a href="https://github.com/DartSter">github</a>
+        </div>
+        <div>
+          <a href="https://rs.school/js-stage0/">Rolling Scopes School</a>
+        </div>
         <div>
           <ul>
             <li>
