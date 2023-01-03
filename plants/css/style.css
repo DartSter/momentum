@@ -43,6 +43,15 @@ html {
 .accented-text-orange {
   color: var(--orange);
 }
+
+.button {
+  transition: 0.5s ease-in-out;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: var(--orange);
+  color: var(--bg-section-white);
+}
 /* Header */
 
 .header-container {
@@ -161,13 +170,6 @@ html {
   line-height: 17px;
   text-transform: uppercase;
   color: var(--black);
-  transition: 0.5s ease-in-out;
-}
-.service-btn:hover,
-.welcome-button:hover {
-  cursor: pointer;
-  background-color: var(--orange);
-  color: var(--bg-section-white);
 }
 
 /* about */
@@ -250,7 +252,6 @@ html {
   line-height: 26px;
   color: var(--orange);
   background-color: var(--bg-section-lite-green);
-  transition: 0.5s;
 }
 
 .service-card-container {
@@ -269,7 +270,6 @@ html {
   border: 1px solid #e3e1d5;
   border-radius: 20px;
 }
-
 
 .card-content {
   display: flex;
@@ -300,9 +300,24 @@ html {
 }
 
 /* Price */
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 115px;
+}
+
+.accordion-header {
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  font-size: 40px;
+  line-height: 48px;
+}
+
 .accordion-container {
   width: 332px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -344,4 +359,34 @@ html {
   border-top: 0.5px solid #aea1a1;
   background-color: var(--light-green);
   display: none;
+}
+
+.price-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 452px;
+}
+
+.price-content-header {
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  font-size: 40px;
+  line-height: 50px;
+  text-align: right;
+}
+
+.price-content-button {
+  padding: 12px 34px 12px 30px;
+  border: 1px solid var(--orange);
+  border-radius: 5px;
+  background: var(--bg-section-white);
+  font-family: var(--font-inika);
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--orange);
 }
