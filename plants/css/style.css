@@ -570,6 +570,10 @@ html {
   color: var(--green);
 }
 
+.footer-link-rss{
+  margin-left: 57px;
+}
+
 .footer-link-list {
   width: 186px;
   display: flex;
