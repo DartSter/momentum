@@ -83,10 +83,6 @@ html {
   color: var(--black);
 }
 
-.nav {
-  /* max-width: 508px; */
-}
-
 .nav-list {
   display: flex;
   list-style: none;
