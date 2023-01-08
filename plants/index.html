@@ -63,7 +63,9 @@
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s
             </p>
-            <button class="button welcome-button" type="button">learn more</button>
+            <button class="button welcome-button" type="button">
+              learn more
+            </button>
           </div>
         </div>
       </section>
@@ -96,8 +98,10 @@
               Service and our projects
             </h2>
             <div class="service-controls-btns">
-              <button class="button service-btn" data-category="garden">Gardens</button
-              ><button class="button service-btn" data-category="lawn">Lawn</button
+              <button class="button service-btn" data-category="garden">
+                Gardens</button
+              ><button class="button service-btn" data-category="lawn">
+                Lawn</button
               ><button class="button service-btn" data-category="planting">
                 Planting
               </button>
@@ -242,70 +246,66 @@
         </div>
       </section>
       <section id="contacts" class="contacts bg-light-green">
-        <div class="container">
-          <h2>Contact us</h2>
-          <div>
-            <div>
-              <select name="contacts" id="contacts">
-                <option value="City" disabled selected>City</option>
-                <option value="Canandaigua">Canandaigua, NY</option>
-                <option value="NewYorkCity">New York City</option>
-                <option value="Yonkers">Yonkers, NY</option>
-                <option value="Sherrill">Sherrill, NY</option>
-              </select>
-              <div>
-                <table>
-                  <tr>
-                    <td>City</td>
-                    <td>Canandaigua, NY</td>
-                  </tr>
-                  <tr>
-                    <td>Phone</td>
-                    <td>+1 585 393 0001</td>
-                  </tr>
-                  <tr>
-                    <td>City</td>
-                    <td>151 Charlotte Street</td>
-                  </tr>
-                </table>
-                <a class="contact-call-btn" href="tel:+15853930001">Call us</a>
-              </div>
+        <div class="container contact-container">
+          <h2 class="contact-header">Contact us</h2>
+          <div class="contact-selector">
+            <select class="contact-select" name="contacts" id="contacts">
+              <option class="contact-select-option" value="City" disabled selected>City</option>
+              <option class="contact-select-option" value="Canandaigua">Canandaigua, NY</option>
+              <option class="contact-select-option" value="NewYorkCity">New York City</option>
+              <option class="contact-select-option" value="Yonkers">Yonkers, NY</option>
+              <option class="contact-select-option" value="Sherrill">Sherrill, NY</option>
+            </select>
+            <div class="contact-result hide">
+              <table class="contact-table">
+                <tr>
+                  <td class="table-field">City:</td>
+                  <td class="table-value">Canandaigua, NY</td>
+                </tr>
+                <tr>
+                  <td class="table-field">Phone:</td>
+                  <td class="table-value">+1 585 393 0001</td>
+                </tr>
+                <tr>
+                  <td class="table-field">Office adress:</td>
+                  <td class="table-value">151 Charlotte Street</td>
+                </tr>
+              </table>
+              <a class="contact-call-btn button" href="tel:+15853930001">Call us</a>
             </div>
-            <img
-              src="assets/images/contact_woman.png"
-              alt="woman whith plant"
-            />
           </div>
+
+          <img class="contact-img" src="assets/images/contact_woman.png" alt="woman whith plant" />
         </div>
       </section>
     </main>
     <footer class="footer bg-white">
-      <div class="container">
-        <div>
+      <div class="container footer-container">
+        <div class="footer-author-block">
           <span>©</span><span>2022</span
-          ><a href="https://github.com/DartSter">github</a>
+          ><a class="footer-link" href="https://github.com/DartSter">github</a>
         </div>
         <div>
-          <a href="https://rs.school/js-stage0/">Rolling Scopes School</a>
+          <a class="footer-link" href="https://rs.school/js-stage0/">Rolling Scopes School</a>
         </div>
         <div>
-          <ul>
-            <li>
+          <ul class="footer-link-list">
+            <li class="footer-link-list-item">
               <a href="https://www.instagram.com/"
                 ><img src="assets/images/icons/inst.svg" alt="instagram"
               /></a>
             </li>
-            <li>
+            <li class="footer-link-list-item">
               <a href="https://www.facebook.com/"
                 ><img src="assets/images/icons/fb.svg" alt="facebook"
               /></a>
             </li>
-            <li>
+            <li class="footer-link-list-item">
               <a href="https://twitter.com/"
                 ><img src="assets/images/icons/twi.svg" alt="twitter"
               /></a>
             </li>
-            <li>
+            <li class="footer-link-list-item">
               <a href="https://www.pinterest.com/"
                 ><img src="assets/images/icons/pin.svg" alt="pinterest"
               /></a>
