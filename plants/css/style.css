@@ -25,8 +25,14 @@ html {
 }
 
 .container {
-  max-width: 1222px;
+  max-width: var(--conteiner-width);
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --conteiner-width: 668px;
+  }
 }
 
 .bg-light-green {
@@ -116,6 +122,12 @@ html {
   color: var(--green);
 }
 
+@media (max-width: 768px) {
+  .header-container {
+    height: 117px;
+  }
+}
+
 /* Welcome */
 
 .welcome {
@@ -173,6 +185,39 @@ html {
   color: var(--black);
 }
 
+@media (max-width: 768px) {
+  .welcome {
+    padding-top: 40px;
+    padding-bottom: 70px;
+    align-items: flex-start;
+  }
+  .welcome-img {
+    order: 2;
+    height: 254px;
+  }
+  .welcome-img img {
+    width: 286px;
+  }
+
+  .welcome-content {
+    order: 1;
+    width: 348px;
+    height: 310px;
+  }
+
+  .welcome-header {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .welcome-paragraph {
+    margin-top: 30px;
+    margin-bottom: 36px;
+    padding-left: 5px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
 /* about */
 
 .about-container {
@@ -208,6 +253,35 @@ html {
   max-width: 464px;
   margin-top: 93px;
   margin-bottom: 94px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+  .about-header {
+    margin: 40px auto;
+    font-size: 35px;
+    line-height: 46px;
+    text-align: center;
+  }
+  .about-paragraph {
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .about-img-container {
+    max-width: 250px;
+    margin-top: 48px;
+    margin-bottom: 90px;
+  }
+  .about-img-container img {
+    width: 100%;
+  }
 }
 
 /* Service */
@@ -272,6 +346,15 @@ html {
   border-radius: 20px;
 }
 
+.service-img-container{
+    width: 329px;
+    overflow: hidden;
+  }
+
+  .service-img{
+    width: 329px;
+  }
+
 .card-content {
   display: flex;
   flex-direction: column;
@@ -298,6 +381,55 @@ html {
   font-size: 16px;
   line-height: 20px;
   color: var(--light-gray);
+}
+
+@media (max-width: 768px) {
+  .service{
+    padding-bottom: 70px;
+  }
+  .service-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 40px;
+  }
+  .service-controls-header {
+    margin-top: 60px;
+    font-size: 35px;
+    line-height: 46px;
+  }
+  .service-controls-btns{
+    margin-top: 15px;
+  }
+  .service-btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .service-card-container{
+    height: 1426px;
+  }
+
+  .service-card{
+    align-items: center;
+    margin-bottom: 38px;
+  }
+
+  .service-img-container{
+    width: 280px;
+    overflow: hidden;
+  }
+
+  .service-img{
+    width: 280px;
+  }
+  .card-content{
+    width: 201px;
+    justify-content: center;
+    text-align: center;
+  }
+  .card-header{
+    margin-bottom: 10px;
+  }
 }
 
 /* Price */
@@ -563,7 +695,7 @@ html {
   color: var(--green);
 }
 
-.footer-link-rss{
+.footer-link-rss {
   margin-left: 57px;
 }
 
