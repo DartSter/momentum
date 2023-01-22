@@ -1,36 +1,43 @@
 console.log(`Самооценка:
 
-1. Валидность верстки - 10
+1. Верстка 768px - 24
 
-2. Семантика - 20:
+2. Верстка 380px - 24
 
-- header, main, footer - 3
-- 5 элементов section - 3
-- 1 h1 - 3
-- 4 h2 - 3
-- 1 nav - 3
-- 2 ul>il>a - 3
-- минимум 5 button, у меня 11 - 2
+3. Нет горизонатальной полосы прокрутки - 15
 
-3. Верстка соответствует макету - 48
+4. Адаптивное меню 22
 
-4. Требования к CSS - 12 :
 
-- построение сетки с помощью flex - 2
-- центрирование при изменении масштаба - 2
-- фоновый цвет на всю страницу - 2  
-- иконки в формате svg - 2
-- изображения в png - 2
-- favicon - 2
 
-5. Интерактивность - 20:
-
-- плавная прокрутка по якорям - 5
-- ссылки в footer ведут на github и RSS - 5
-- визуальные эффекты у ссылок и кнопок - 5
-- плавное изменение визуальных эффектов - 5
-
-Итоговая оценка - 100 баллов
+Итоговая оценка - 75 баллов
 
 `);
 
+// burgerMenu
+
+const menuBtn = document.getElementById('menu-btn')
+const navList = document.getElementById('nav-list')
+const main = document.getElementById('main')
+const navItem = document.querySelectorAll('.nav-item')
+
+function menu() {
+    navList.classList.toggle('active-menu')
+    menuBtn.classList.toggle('active-btn')
+}
+    
+function hideMenu() {
+   
+    setTimeout(() => {
+        navList.classList.remove('active-menu')
+        menuBtn.classList.remove('active-btn')  
+   },500)
+    
+}
+
+menuBtn.addEventListener('click', menu)
+main.addEventListener('click', menu)
+
+navItem.forEach(item => {
+    item.addEventListener('click', hideMenu)
+});
