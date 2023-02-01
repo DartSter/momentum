@@ -43,6 +43,7 @@ navItem.forEach((item) => {
 //service buttons
 
 const serviceBtns = document.querySelector(".service-controls-btns");
+const serviceBtnList = document.querySelectorAll(".service-btn");
 const serviceCards = document.querySelectorAll(".service-card");
 const serviceCardsControl = {
   garden: false,
@@ -63,5 +64,11 @@ serviceBtns.addEventListener("click", (event) => {
   });
   if (Object.values(serviceCardsControl).every((i) => !i)) {
     serviceCards.forEach((item) => item.classList.remove("blur"));
+  }
+  if (Object.values(serviceCardsControl).every((i) => i)) {
+    serviceBtnList.forEach((btn) => btn.classList.remove("active-btn"));
+    for (category in serviceCardsControl) {
+      serviceCardsControl[category] = false;
+    }
   }
 });
