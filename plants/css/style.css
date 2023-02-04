@@ -184,13 +184,10 @@ html {
     transition: 0.5s ease-in-out;
   }
 
-  
   .active-menu {
     width: 100%;
     opacity: 1;
-    }
-
- 
+  }
 
   .nav-item {
     padding-left: 0;
@@ -451,7 +448,7 @@ html {
   background-color: var(--bg-section-lite-green);
 }
 
-.active-btn{
+.active-btn {
   background-color: var(--orange);
   color: var(--bg-section-white);
 }
@@ -474,8 +471,8 @@ html {
   transition: 1s ease-in-out;
 }
 
-.blur{
-  filter: blur(5px)
+.blur {
+  filter: blur(5px);
 }
 
 .service-img-container {
@@ -648,23 +645,81 @@ html {
   justify-content: space-between;
   padding: 16px 40px;
   border: none;
+  background-color: transparent;
   font-family: var(--font-inter);
   font-weight: var(--font-weight-bold);
   font-size: 20px;
   line-height: 20px;
 }
 
-.accordion-btn::after {
-  content: url(/assets/images/icons/accordion_btn_close.svg);
+.accordion-btn-img {
   width: 16px;
   height: 16px;
 }
 
 .accoridon-pannel {
-  border-top: 0.5px solid #aea1a1;
+  margin-inline: 40px;
   background-color: var(--light-green);
   display: none;
 }
+
+.open {
+  display: block;
+}
+
+.accordion-pannel-content {
+  display: block;
+  margin-top: 0;
+  padding-block: 6px;
+  border-top: 0.5px solid #aea1a1;
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 10px;
+  color: #717171;
+}
+
+.accordion-pannel-price {
+  margin-bottom: 0px;
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--black);
+}
+
+
+
+.fs18px {
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.order-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 86px;
+  height: 25px;
+  margin-block: 12px;
+  background: #ffffff;
+  border-color: transparent;
+  border-radius: 10px;
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  font-size: 16px;
+  line-height: 20px;
+  color: #717171;
+}
+
+
 
 .price-content {
   display: flex;
@@ -755,7 +810,7 @@ html {
     padding: 0 30px;
   }
 
-  .accordion-btn::after {
+  .accordion-btn-img {
     padding-top: 2px;
     padding-right: 10px;
   }

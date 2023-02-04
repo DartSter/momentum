@@ -72,3 +72,41 @@ serviceBtns.addEventListener("click", (event) => {
     }
   }
 });
+
+// accordion
+
+const accordionItem = document.querySelectorAll(".accordion-item");
+const accordionBtnImg = document.querySelectorAll(".accordion-btn-img");
+
+const accordionControlArray = new Array(accordionItem.length).fill(false);
+
+console.log(accordionItem);
+
+accordionBtnImg.forEach((i, index) =>
+  i.addEventListener("click", (event) => {
+    if (accordionControlArray[index] == true) {
+      accordionControlArray[index] = false;
+      accordionItem[index].children[1].classList.remove("open");
+      accordionItem[index].style.backgroundColor = "var(--bg-section-lite-green)";
+      accordionBtnImg[index].src =
+        "/assets/images/icons/accordion_btn_close.svg";
+      return;
+    }
+    accordionControlArray.fill(false);
+    accordionControlArray[index] = true;
+    accordionItem.forEach((item, btnIndex) => {
+      if (accordionControlArray[btnIndex]) {
+        item.children[1].classList.add("open");
+        item.style.backgroundColor = "var(--light-green)";
+        accordionBtnImg[btnIndex].src =
+          "/assets/images/icons/accordion_btn_open.svg";
+      } else {
+        item.children[1].classList.remove("open");
+        item.style.backgroundColor = "var(--bg-section-lite-green)";
+
+        accordionBtnImg[btnIndex].src =
+          "/assets/images/icons/accordion_btn_close.svg";
+      }
+    });
+  })
+);
