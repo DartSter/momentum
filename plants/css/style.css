@@ -885,7 +885,7 @@ html {
 .contact-selector::after {
   position: absolute;
   z-index: 2;
-  content: url(/assets/images/icons/drop_btn_unactive.svg);
+  content: url(../assets/images/icons/drop_btn_unactive.svg);
   width: 16px;
   height: 16px;
   right: 35px;
@@ -894,7 +894,7 @@ html {
 .dropdown.contact-selector::after {
   position: absolute;
   z-index: 2;
-  content: url(/assets/images/icons/drop_btn_active.svg);
+  content: url(../assets/images/icons/drop_btn_active.svg);
   width: 16px;
   height: 16px;
   right: 35px;
