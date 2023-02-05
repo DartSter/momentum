@@ -83,7 +83,7 @@ accordionBtnImg.forEach((i, index) =>
       accordionItem[index].style.backgroundColor =
         "var(--bg-section-lite-green)";
       accordionBtnImg[index].src =
-        "/assets/images/icons/accordion_btn_close.svg";
+        "assets/images/icons/accordion_btn_close.svg";
       return;
     }
     accordionControlArray.fill(false);
@@ -93,13 +93,13 @@ accordionBtnImg.forEach((i, index) =>
         item.children[1].classList.add("open");
         item.style.backgroundColor = "var(--light-green)";
         accordionBtnImg[btnIndex].src =
-          "/assets/images/icons/accordion_btn_open.svg";
+          "assets/images/icons/accordion_btn_open.svg";
       } else {
         item.children[1].classList.remove("open");
         item.style.backgroundColor = "var(--bg-section-lite-green)";
 
         accordionBtnImg[btnIndex].src =
-          "/assets/images/icons/accordion_btn_close.svg";
+          "assets/images/icons/accordion_btn_close.svg";
       }
     });
   })
