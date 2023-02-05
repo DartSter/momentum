@@ -963,6 +963,11 @@ html {
   border-radius: 5px;
 }
 
+.active-table-select {
+  background-color: #c1e698;
+  box-shadow: none;
+}
+
 @media (max-width: 768px) {
   .contact-container {
     padding-top: 40px;
@@ -1007,8 +1012,6 @@ html {
     font-size: 16px;
     line-height: 40px;
     letter-spacing: 0.05em;
-    background-color: #c1e698;
-    box-shadow: none;
   }
 
   .active-table-img {
@@ -1059,8 +1062,6 @@ html {
     font-size: 16px;
     line-height: 40px;
     letter-spacing: 0.05em;
-    background-color: #c1e698;
-    box-shadow: none;
   }
 
   .contact-result {
@@ -1071,31 +1072,26 @@ html {
     padding-bottom: 23px;
   }
 
-  .contact-table{
+  .contact-table {
     margin-inline: 2px;
-    
   }
-  .table-field{
+  .table-field {
     width: 65px;
     padding-top: 15px;
     line-height: 18px;
-
   }
   .table-value {
     width: 145px;
     padding-top: 15px;
     line-height: 18px;
-    
   }
-  
-  .contact-call-btn{
+
+  .contact-call-btn {
     margin-left: 25px;
-  } 
+  }
   .active-table-img {
     display: none;
   }
-
-
 }
 /* Footer */
 
