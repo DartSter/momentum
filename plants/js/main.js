@@ -77,17 +77,15 @@ serviceBtns.addEventListener("click", (event) => {
 
 const accordionItem = document.querySelectorAll(".accordion-item");
 const accordionBtnImg = document.querySelectorAll(".accordion-btn-img");
-
 const accordionControlArray = new Array(accordionItem.length).fill(false);
-
-console.log(accordionItem);
 
 accordionBtnImg.forEach((i, index) =>
   i.addEventListener("click", (event) => {
     if (accordionControlArray[index] == true) {
       accordionControlArray[index] = false;
       accordionItem[index].children[1].classList.remove("open");
-      accordionItem[index].style.backgroundColor = "var(--bg-section-lite-green)";
+      accordionItem[index].style.backgroundColor =
+        "var(--bg-section-lite-green)";
       accordionBtnImg[index].src =
         "/assets/images/icons/accordion_btn_close.svg";
       return;
@@ -110,3 +108,33 @@ accordionBtnImg.forEach((i, index) =>
     });
   })
 );
+
+// Contacts table
+const contactSelector = document.querySelector('.contact-selector')
+const contactSelect = document.querySelector(".contact-select");
+const contactValues = {
+  Canandaigua: ["Canandaigua, NY", "+1	585	393 0001", "151 Charlotte Street"],
+  NewYorkCity: ["New York City", "+1	212	456 0002", "9 East 91st Street"],
+  Yonkers: ["Yonkers, NY", "+1	914	678 0003", "511 Warburton Ave"],
+  Sherrill: ["Sherrill, NY", "+1	315	908 0004", "14 WEST Noyes BLVD"],
+};
+const tableValue = document.querySelectorAll(".table-value");
+let contactCallBtn = document.querySelector(".contact-call-btn");
+const contactImg = document.querySelector(".contact-img");
+const contactResult = document.querySelector(".contact-result");
+
+contactSelect.addEventListener('click', event=> contactSelector.classList.toggle('dropdown'))
+
+contactSelect.addEventListener("change", (event) => {
+  contactResult.classList.remove("hide");
+
+  tableValue.forEach((tableValue, index) => {
+    contactSelector.classList.add('selected-city')
+    tableValue.innerHTML = contactValues[event.target.value][index];
+  });
+  contactCallBtn.href = `tel:${contactValues[event.target.value][1]}`;
+  contactSelect.classList.add('active-table-select')
+  contactImg.classList.add('active-table-img')
+});
+
+console.log(contactSelector)

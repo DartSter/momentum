@@ -12,6 +12,7 @@
   --conteiner-width: 1222px;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
+  --dropdownImg: "/assets/images/icons/drop_btn_unactive.svg";
 }
 
 html {
@@ -690,8 +691,6 @@ html {
   color: var(--black);
 }
 
-
-
 .fs18px {
   font-size: 18px;
 }
@@ -718,8 +717,6 @@ html {
   line-height: 20px;
   color: #717171;
 }
-
-
 
 .price-content {
   display: flex;
@@ -894,9 +891,9 @@ html {
   right: 35px;
   top: 113px;
 }
-.contact-selector::before {
+.dropdown.contact-selector::after {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   content: url(/assets/images/icons/drop_btn_active.svg);
   width: 16px;
   height: 16px;
@@ -951,8 +948,6 @@ html {
 
 .contact-call-btn {
   margin-top: 24px;
-  /* margin-left: 120px; */
-
   padding: 7px 42px;
   text-decoration: none;
   font-family: var(--font-inika);
@@ -990,6 +985,35 @@ html {
     margin-top: 205px;
     margin-left: 20px;
   }
+
+  .contact-result {
+    padding-top: 14px;
+    padding-left: 25px;
+  }
+
+  .table-field,
+  .table-value {
+    line-height: 37px;
+  }
+  .contact-call-btn {
+    margin-top: 15px;
+    padding: 6px 42px;
+  }
+
+  .active-table-select {
+    margin-top: 55px;
+    margin-bottom: 62px;
+    padding-left: 33px;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    background-color: #c1e698;
+    box-shadow: none;
+  }
+
+  .active-table-img {
+    margin-top: 14px;
+  }
 }
 @media (max-width: 380px) {
   .contact-container {
@@ -1005,18 +1029,73 @@ html {
     width: 300px;
   }
   .contact-selector::after {
-    right: 22px;
+    right: 45px;
     top: 94px;
   }
-  .contact-selector::before {
-    right: 22px;
+
+  .dropdown.contact-selector::after {
+    right: 45px;
     top: 94px;
+  }
+  .selected-city.contact-selector::after {
+    right: 39px;
+    top: 58px;
+  }
+
+  .selected-city.dropdown.contact-selector::after {
+    right: 39px;
+    top: 58px;
   }
   .contact-img {
     height: 120px;
     margin-top: 88px;
     margin-left: -3px;
   }
+  .active-table-select {
+    margin-top: 40px;
+    margin-bottom: 49px;
+    margin-left: 22px;
+    padding-left: 22px;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    background-color: #c1e698;
+    box-shadow: none;
+  }
+
+  .contact-result {
+    width: 223px;
+    margin-inline: 30px;
+    margin-bottom: 33px;
+    padding-top: 20px;
+    padding-bottom: 23px;
+  }
+
+  .contact-table{
+    margin-inline: 2px;
+    
+  }
+  .table-field{
+    width: 65px;
+    padding-top: 15px;
+    line-height: 18px;
+
+  }
+  .table-value {
+    width: 145px;
+    padding-top: 15px;
+    line-height: 18px;
+    
+  }
+  
+  .contact-call-btn{
+    margin-left: 25px;
+  } 
+  .active-table-img {
+    display: none;
+  }
+
+
 }
 /* Footer */
 
