@@ -109,7 +109,7 @@
             </div>
           </div>
           <div class="service-card-container">
-            <div class="service-card">
+            <div class="service-card" data-category="garden">
               <div class="service-img-container">
                 <img
                   class="service-img"
@@ -122,7 +122,7 @@
                 <p class="card-paragraph">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-category="planting">
               <div class="service-img-container">
                 <img
                   class="service-img"
@@ -135,7 +135,7 @@
                 <p class="card-paragraph">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-category="lawn">
               <div class="service-img-container">
                 <img
                   class="service-img"
@@ -148,7 +148,7 @@
                 <p class="card-paragraph">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-category="planting">
               <div class="service-img-container">
                 <img
                   class="service-img"
@@ -161,7 +161,7 @@
                 <p class="card-paragraph">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-category="garden">
               <div class="service-img-container">
                 <img
                   class="service-img"
@@ -174,7 +174,7 @@
                 <p class="card-paragraph">Lorem Ipsum has been the industry</p>
               </div>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-category="planting">
               <div class="service-img-container">
                 <img
                   class="service-img"
@@ -196,36 +196,69 @@
             <h2 class="accordion-header">Prices</h2>
             <div class="accordion-container">
               <div class="accordion-item">
-                <button class="accordion-btn">Basics</button>
+                <button class="accordion-btn">
+                  Basics
+                  <img
+                    class="accordion-btn-img"
+                    src="/assets/images/icons/accordion_btn_close.svg"
+                    alt=""
+                  />
+                </button>
                 <div class="accoridon-pannel">
-                  <p>
+                  <p class="accordion-pannel-content">
                     Release of Letraset sheets containing Lorem Ipsum passages,
                     and more recently
                   </p>
-                  <p><span>$15</span> / per hour</p>
-                  <button>Order</button>
+                  <p class="accordion-pannel-price">
+                    <span class="accented-text-orange bold">$<span class="fs18px bold">15</span></span> / per hour
+                  </p>
+                  <a class="button order-btn" href="#contacts">Order</a>
                 </div>
               </div>
               <div class="accordion-item">
-                <button class="accordion-btn">Standard</button>
+                <button class="accordion-btn">
+                  Standard
+                  <img
+                    class="accordion-btn-img"
+                    src="/assets/images/icons/accordion_btn_close.svg"
+                    alt=""
+                  />
+                </button>
                 <div class="accoridon-pannel">
-                  <p>
+                  <p class="accordion-pannel-content">
                     Release of Letraset sheets containing Lorem Ipsum passages,
                     and more recently
                   </p>
-                  <p><span>$25</span> / per hour</p>
-                  <button>Order</button>
+                  <p class="accordion-pannel-price">
+                    <span class="accented-text-orange bold"
+                      >$<span class="fs18px bold">25</span></span
+                    >
+                    / per hour
+                  </p>
+                  <a class="button order-btn">Order</a>
                 </div>
               </div>
               <div class="accordion-item">
-                <button class="accordion-btn">Pro care</button>
+                <button class="accordion-btn">
+                  Pro care
+                  <img
+                    class="accordion-btn-img"
+                    src="/assets/images/icons/accordion_btn_close.svg"
+                    alt=""
+                  />
+                </button>
                 <div class="accoridon-pannel">
-                  <p>
+                  <p class="accordion-pannel-content">
                     Release of Letraset sheets containing Lorem Ipsum passages,
                     and more recently
                   </p>
-                  <p><span>$35</span> / per hour</p>
-                  <button>Order</button>
+                  <p class="accordion-pannel-price">
+                    <span class="accented-text-orange bold"
+                      >$<span class="fs18px bold">35</span></span
+                    >
+                    / per hour
+                  </p>
+                  <a class="button order-btn">Order</a>
                 </div>
               </div>
             </div>
@@ -251,11 +284,26 @@
           <h2 class="contact-header">Contact us</h2>
           <div class="contact-selector">
             <select class="contact-select" name="contacts" id="contact">
-              <option class="contact-select-option" value="City" disabled selected>City</option>
-              <option class="contact-select-option" value="Canandaigua">Canandaigua, NY</option>
-              <option class="contact-select-option" value="NewYorkCity">New York City</option>
-              <option class="contact-select-option" value="Yonkers">Yonkers, NY</option>
-              <option class="contact-select-option" value="Sherrill">Sherrill, NY</option>
+              <option
+                class="contact-select-option"
+                value="City"
+                disabled
+                selected
+              >
+                City
+              </option>
+              <option class="contact-select-option" value="Canandaigua">
+                Canandaigua, NY
+              </option>
+              <option class="contact-select-option" value="NewYorkCity">
+                New York City
+              </option>
+              <option class="contact-select-option" value="Yonkers">
+                Yonkers, NY
+              </option>
+              <option class="contact-select-option" value="Sherrill">
+                Sherrill, NY
+              </option>
             </select>
             <div class="contact-result hide">
               <table class="contact-table">
@@ -272,11 +320,17 @@
                   <td class="table-value">151 Charlotte Street</td>
                 </tr>
               </table>
-              <a class="contact-call-btn button" href="tel:+15853930001">Call us</a>
+              <a class="contact-call-btn button" href="tel:+15853930001"
+                >Call us</a
+              >
             </div>
           </div>
 
-          <img class="contact-img" src="assets/images/contact_woman.png" alt="woman whith plant" />
+          <img
+            class="contact-img"
+            src="assets/images/contact_woman.png"
+            alt="woman whith plant"
+          />
         </div>
       </section>
     </main>
@@ -287,7 +341,9 @@
           ><a class="footer-link" href="https://github.com/DartSter">github</a>
         </div>
         <div class="footer-link-rss">
-          <a class=" footer-link" href="https://rs.school/js-stage0/">Rolling Scopes School</a>
+          <a class="footer-link" href="https://rs.school/js-stage0/"
+            >Rolling Scopes School</a
+          >
         </div>
         <div class="footer-social-links-container">
           <ul class="footer-link-list">
