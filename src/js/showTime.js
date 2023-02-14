@@ -1,18 +1,18 @@
 import { showDate } from "./showDate";
 import { showGreeting } from "./showGreeting";
 
-export function showTime(timeElement, dateElement, greetingElements, local) {
+export function showTime(timeElement, dateElement, greetingElement, local) {
   const date = new Date();
   const currentTime = date.toLocaleTimeString();
   timeElement.textContent = currentTime;
   showDate(dateElement, local);
-  showGreeting(greetingElements, local);
+  showGreeting(greetingElement, local);
   setTimeout(
     showTime,
     1000,
     timeElement,
     dateElement,
-    greetingElements,
+    greetingElement,
     local
   );
 }
