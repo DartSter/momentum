@@ -1,11 +1,8 @@
 import { showTime } from "./js/showTime";
 
-
-
-
-// time and date
+// time, date and greeting
 const time = document.querySelector(".time");
 const date = document.querySelector(".date");
+const greeting = document.querySelector(".greeting");
 
-showTime(time, date, 'ru-RU');
-
+showTime(time, date, greeting, "en-US");
