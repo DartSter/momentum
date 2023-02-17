@@ -1,7 +1,6 @@
 import { showTime } from "./js/showTime";
 import { showPlaceholder } from "./js/showPlaceholder";
-import { setNameToLocalStorage, getNameFromLocalStorage } from "./js/saveName";
-import { setCityToLocalStorage, getCityFromLocalStorage } from "./js/saveCity";
+import { setLS, getLS } from "./js/controlLocalStorage";
 import { setBg, getSlideNext, getSlidePrev } from "./js/controlSlider";
 import { getWeather } from "./js/getWeather";
 const lang = "en-US";
@@ -54,9 +53,9 @@ cityInput.addEventListener("change", (e) => {
 
 function setLocalStorage() {
   //add name
-  setNameToLocalStorage(name);
+  setLS("name",name);
   //add city
-  setCityToLocalStorage(cityInput);
+  setLS("city",cityInput);
 }
 
 window.addEventListener("beforeunload", setLocalStorage);
@@ -65,9 +64,9 @@ window.addEventListener("beforeunload", setLocalStorage);
 
 function getLocalStorage() {
   //get name
-  getNameFromLocalStorage("name", name);
+  getLS("name", name);
   //get city
-  getCityFromLocalStorage("city", cityInput);
+  getLS("city", cityInput);
 }
 
 window.addEventListener("load", getLocalStorage);
