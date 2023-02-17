@@ -3,6 +3,8 @@ import { showPlaceholder } from "./js/showPlaceholder";
 import { setLS, getLS } from "./js/controlLocalStorage";
 import { setBg, getSlideNext, getSlidePrev } from "./js/controlSlider";
 import { getWeather } from "./js/getWeather";
+import { qoutes } from "./js/quotes";
+import { getQutes } from "./js/getQuotes";
 const lang = "en-US";
 
 // time, date and greeting
@@ -48,6 +50,20 @@ cityInput.addEventListener("change", (e) => {
     ? getWeather(e.target.value, language)
     : getWeather(city, language);
 });
+
+// quotes
+
+const quote = document.querySelector('.quote');
+const quoteAuthor = document.querySelector('.author');
+const changeQoute = document.querySelector('.change-quote')
+
+
+
+getQutes(quote, quoteAuthor, lang ,qoutes)
+changeQoute.addEventListener('click', () => {
+  getQutes(quote, quoteAuthor, lang ,qoutes)
+})
+
 
 // add elements to local storage
 
