@@ -65,27 +65,83 @@ changeQoute.addEventListener("click", () => {
   getQutes(quote, quoteAuthor, lang, qoutes);
 });
 
-// simple audioplayer
-
+// advanced audio player
+let isPlay = false;
+const player = new Player(playList);
+let currentSong = player.getSongElement();
 const playButton = document.querySelector(".play");
 const playPrevButton = document.querySelector(".play-prev");
 const playNextButton = document.querySelector(".play-next");
-let isPlay = false;
-const player = new Player(playList);
+const playListElement = document.querySelector(".play-list");
+const songName = document.querySelector(".song-name");
+const songDuration = document.querySelector(".song-duration");
+const progressBar = document.querySelector(".progress-bar");
+const soundButton = document.querySelector(".sound");
+const soundBar = document.querySelector(".sound-bar");
+let volume = 100;
+function checkIsPlay() {
+  if (!isPlay) {
+    isPlay = !isPlay;
+    playButton.classList.toggle("pause");
+  }
+}
 
+player.createPlayList(playListElement);
 
 playButton.addEventListener("click", () => {
   playButton.classList.toggle("pause");
   isPlay = !isPlay;
-  player.play(isPlay);
+  player.play(isPlay, progressBar);
+  songName.textContent = player.getSongName();
 });
 playPrevButton.addEventListener("click", () => {
-  player.playPrev()
+  checkIsPlay();
+  player.playPrev();
+  currentSong = player.getSongElement();
+  songName.textContent = player.getSongName();
 });
 playNextButton.addEventListener("click", () => {
-  player.playNext()
-
+  checkIsPlay();
+  player.playNext();
+  currentSong = player.getSongElement();
+  songName.textContent = player.getSongName();
 });
+
+playListElement.addEventListener("click", (e) => {
+  checkIsPlay();
+  player.changeSong(e.target.dataset.ind, isPlay);
+  currentSong = player.getSongElement();
+  songName.textContent = player.getSongName();
+});
+
+currentSong.addEventListener("ended", () => {
+  player.playNext();
+  currentSong = player.getSongElement();
+});
+
+progressBar.addEventListener("change", () => {
+  player.changSongTime(progressBar);
+});
+
+soundBar.addEventListener("change", () => {
+  player.changeSound(soundBar.value);
+});
+
+soundButton.addEventListener("click", () => {
+  soundButton.classList.toggle("mute");
+  if (soundButton.classList.contains("mute")) {
+    player.changeSound(0);
+    volume = soundBar.value;
+    soundBar.value = 0;
+  } else {
+    player.changeSound(volume);
+    soundBar.value = volume;
+  }
+});
+
+setInterval(() => {
+  player.getSongTiming(songDuration, progressBar, isPlay);
+}, 500);
 
 // add elements to local storage
 

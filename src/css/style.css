@@ -31,19 +31,61 @@ body {
   padding: 20px;
 }
 
+
+.player{
+  z-index: 100;
+}
+
+.duration-control{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.progress-bar{
+ width: 100%;
+ margin-block: 10px;  
+}
+
+.sound-controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sound{
+  border: none;
+  width: 25px;
+  height: 25px;
+  background: center/cover;
+  background-image: url('../assets/svg/sound.svg');
+  transition: background-image 1s ease-in-out;
+}
+
+.mute{
+  background-image: url('../assets/svg/mute.svg');
+  transition: background-image 1s ease-in-out;
+}
+
 .player-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 120px;
-  margin-bottom: 28px;
+  margin-inline: auto;
+  margin-block: 12px 12px;
+  
 }
 
 .play-list {
   text-align: left;
 }
 
-.play-item {
+
+
+.song {
   position: relative;
   padding: 5px;
   padding-left: 20px;
@@ -53,11 +95,11 @@ body {
   transition: .3s;
 }
 
-.play-item:hover {
+.song:hover {
   opacity: 1;
 }
 
-.play-item::before {
+.song::before {
   content: "\2713";  
   position: absolute;
   left: 0;
@@ -65,7 +107,7 @@ body {
   font-weight: 900;
 }
 
-.item-active::before {
+.current-song::before {
   color: #C5B358;
 }
 
