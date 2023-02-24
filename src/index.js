@@ -5,6 +5,9 @@ import { setBg, getSlideNext, getSlidePrev } from "./js/controlSlider";
 import { getWeather } from "./js/getWeather";
 import { qoutes } from "./js/quotes";
 import { getQutes } from "./js/getQuotes";
+import playList from "./js/playList";
+import Player from "./js/player";
+
 const lang = "en-US";
 
 // time, date and greeting
@@ -53,25 +56,44 @@ cityInput.addEventListener("change", (e) => {
 
 // quotes
 
-const quote = document.querySelector('.quote');
-const quoteAuthor = document.querySelector('.author');
-const changeQoute = document.querySelector('.change-quote')
+const quote = document.querySelector(".quote");
+const quoteAuthor = document.querySelector(".author");
+const changeQoute = document.querySelector(".change-quote");
+
+getQutes(quote, quoteAuthor, lang, qoutes);
+changeQoute.addEventListener("click", () => {
+  getQutes(quote, quoteAuthor, lang, qoutes);
+});
+
+// simple audioplayer
+
+const playButton = document.querySelector(".play");
+const playPrevButton = document.querySelector(".play-prev");
+const playNextButton = document.querySelector(".play-next");
+let isPlay = false;
+const player = new Player(playList);
 
 
+playButton.addEventListener("click", () => {
+  playButton.classList.toggle("pause");
+  isPlay = !isPlay;
+  player.play(isPlay);
+});
+playPrevButton.addEventListener("click", () => {
+  player.playPrev()
+});
+playNextButton.addEventListener("click", () => {
+  player.playNext()
 
-getQutes(quote, quoteAuthor, lang ,qoutes)
-changeQoute.addEventListener('click', () => {
-  getQutes(quote, quoteAuthor, lang ,qoutes)
-})
-
+});
 
 // add elements to local storage
 
 function setLocalStorage() {
   //add name
-  setLS("name",name);
+  setLS("name", name);
   //add city
-  setLS("city",cityInput);
+  setLS("city", cityInput);
 }
 
 window.addEventListener("beforeunload", setLocalStorage);
