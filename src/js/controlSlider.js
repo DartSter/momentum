@@ -1,3 +1,6 @@
+import { getUnsplashImg } from "./api/getUnsplashImg";
+import { getFlickrImg } from "./api/getFlickrImg";
+
 const body = document.querySelector("body");
 let randomNum = getRandomNum();
 
@@ -6,23 +9,37 @@ function getRandomNum() {
 }
 
 const currentTimes = getTimeOfDay();
-function getTimeOfDay() {
+export function getTimeOfDay() {
   const times = ["night", "morning", "afternoon", "evening"];
   return times[Math.floor(new Date().getHours() / 6)];
 }
 
-export function setBg() {
+function getGithubImg() {
+  return `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${currentTimes}/${randomNum}.jpg`;
+}
+
+const apiSources = {
+  github: getGithubImg,
+  unsplash: getUnsplashImg,
+  flickr: getFlickrImg,
+};
+
+export async function setBg(source = "github", theme = currentTimes) {
   const img = new Image();
-  img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${currentTimes}/${randomNum}.jpg`;
+  img.src = await apiSources[source](theme);
   img.onload = () => (body.style.backgroundImage = `url(${img.src})`);
 }
 
-export function getSlideNext() {
-  randomNum = randomNum === "20" ? "01" : `${+randomNum + 1}`.padStart(2, 0);
-  setBg();
+export async function getSlideNext(source = "github", theme = currentTimes) {
+  if (source === "github") {
+    randomNum = randomNum === "20" ? "01" : `${+randomNum + 1}`.padStart(2, 0);
+    setBg(source);
+  } else setBg(source, theme);
 }
 
-export function getSlidePrev() {
-  randomNum = randomNum === "01" ? "20" : `${+randomNum - 1}`.padStart(2, 0);
-  setBg();
+export async function getSlidePrev(source = "github", theme = currentTimes) {
+  if (source === "github") {
+    randomNum = randomNum === "01" ? "20" : `${+randomNum - 1}`.padStart(2, 0);
+    setBg((source));
+  } else setBg(source, theme);
 }

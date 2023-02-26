@@ -15,4 +15,5 @@ export function showTime(timeElement, dateElement, greetingElement, local) {
     greetingElement,
     local
   );
+  
 }

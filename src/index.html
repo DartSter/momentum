@@ -10,14 +10,14 @@
   </head>
   <body>
     <header class="header">
-      <div class="player">
+      <div class="player app">
         <span class="song-name"></span>
         <div class="duration-control">
           <span class="song-duration"></span>
           <input type="range" class="progress-bar" min="0" max="" value="0" />
         </div>
         <div class="sound-controls">
-          <input type="range" class="sound-bar" min="0" max="100" value="100">
+          <input type="range" class="sound-bar" min="0" max="100" value="100" />
           <button class="sound"></button>
         </div>
         <div class="player-controls">
@@ -27,7 +27,38 @@
         </div>
         <ul class="play-list"></ul>
       </div>
-      <div class="weather">
+      <button class="settings-btn"></button>
+      <div class="settings">
+        <div class="setting-container">
+          <div class="language-container">
+            <span class="language-title"></span>
+            <button class="setting-item language">EN</button>
+          </div>
+          <div class="api-control">
+            <span class="image-api-title"></span>
+            <div class="image-api">
+              <button class="setting-item" data-api="github">GitHub</button>
+              <button class="setting-item" data-api="unsplash">Unsplash</button>
+              <button class="setting-item" data-api="flickr">Flickr</button>
+            </div>
+            <input type="text" class="apiTag" />
+            <button class="remove-tag setting-item"></button>
+          </div>
+          <div class="page-elements-controls">
+            <span class="app-select"></span>
+            <div class="selected-list">
+            <button class="setting-item" data-block="time"></button>
+            <button class="setting-item" data-block="date"></button>
+            <button class="setting-item" data-block="greeting-container"></button>
+            <button class="setting-item" data-block="quote-container"></button>
+            <button class="setting-item" data-block="weather"></button>
+            <button class="setting-item" data-block="player"></button>
+            <button class="setting-item" data-block="todolist-container"></button>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="weather app">
         <input type="text" class="city" />
         <i class="weather-icon owf"></i>
         <div class="weather-error"></div>
@@ -44,18 +75,25 @@
         <button class="slide-prev slider-icon"></button>
         <button class="slide-next slider-icon"></button>
       </div>
-      <time class="time"></time>
-      <date class="date"></date>
-      <div class="greeting-container">
+      <time class="time app"></time>
+      <date class="date app"></date>
+      <div class="greeting-container app">
         <span class="greeting"></span>
         <input type="text" class="name" />
       </div>
+      <div class="todolist-container app">
+        <span class="todo-title"></span>
+        <ul class="todo-list"></ul>
+        <input type="text" class="todo" >
+      </div>
     </main>
     <footer class="footer">
-      <button class="change-quote"></button>
-      <div>
-        <div class="quote"></div>
-        <div class="author"></div>
+      <div class="quote-container app">
+        <button class="change-quote"></button>
+        <div>
+          <div class="quote"></div>
+          <div class="author"></div>
+        </div>
       </div>
     </footer>
   </body>
